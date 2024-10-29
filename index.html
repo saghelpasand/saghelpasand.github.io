@@ -8,7 +8,7 @@
     <style>
         /* Dark Mode Styles */
         body {
-            background-image: url('https://cdn.esahubble.org/archives/images/screen/heic1118a.jpg'); /* Replace with your image URL */
+            background-image: url('https://cdn.esahubble.org/archives/images/screen/heic1118a.jpg'); /* Background image */
             background-size: cover; /* Cover the entire background */
             background-position: center; /* Center the image */
             background-repeat: no-repeat; /* Do not repeat the image */
@@ -27,6 +27,9 @@
         h1 {
             color: #ffcc00; /* Bright yellow for headings */
             margin: 0;
+            background-color: rgba(0, 0, 0, 0.7); /* Black highlight */
+            padding: 10px; /* Padding around text */
+            border-radius: 5px; /* Rounded corners */
         }
 
         nav {
@@ -69,15 +72,25 @@
             display: block; /* Show active tab */
         }
 
-        .profile-image, .hobby-image {
-            max-width: 100%;
+        .profile-image {
+            max-width: 200px; /* Set a max width for the image */
             height: auto;
             border-radius: 5px; /* Rounded images */
-            margin: 10px 0; /* Space between images */
+            margin-right: 20px; /* Space between image and text */
+            float: left; /* Float image to the left */
         }
 
         h2 {
             color: #ffcc00; /* Bright yellow for subsection headings */
+            background-color: rgba(0, 0, 0, 0.7); /* Black highlight */
+            padding: 10px; /* Padding around text */
+            border-radius: 5px; /* Rounded corners */
+        }
+
+        p {
+            background-color: rgba(0, 0, 0, 0.7); /* Black highlight for paragraph */
+            padding: 10px; /* Padding around text */
+            border-radius: 5px; /* Rounded corners */
         }
 
         a {
@@ -108,6 +121,12 @@
             .tab-buttons button {
                 width: 100%; /* Full width buttons */
             }
+
+            .profile-image {
+                float: none; /* Reset float for small screens */
+                display: block; /* Display image as block */
+                margin: 0 auto; /* Center the image */
+            }
         }
     </style>
 </head>
@@ -130,10 +149,9 @@
         <h2>About Me</h2>
         <img src="https://i.postimg.cc/nh7TYG0Y/20240911-155313.jpg" alt="Samaneh Aghelpasand" class="profile-image">
         <p>Hello! I’m Samaneh Aghelpasand, an enthusiastic astronomer with a Master’s degree in Astronomy and Astrophysics from Alzahra University in Tehran. My journey into the cosmos began with a passion for understanding the universe, which led me to explore topics like the fascinating behaviors of water masers in star-forming regions.
-During my studies, I developed a neural network to identify exoplanets using data from the Kepler Space Telescope, which was both challenging and rewarding. I also completed my Bachelor's in Physics, where I delved into the electromagnetic detection of meteor signals—an experience that ignited my curiosity for the unknown.
-I love sharing my research at international workshops and conferences, where I connect with fellow astronomy enthusiasts and learn from experts in the field. Outside of my academic work, I’m an active member of the Astronomy Society of Iran, where I engage with a vibrant community of astronomers and contribute to our shared passion for the stars.
-When I’m not immersed in research, you can find me capturing the beauty of the night sky through photography or exploring new places. I believe that both science and art can illuminate our understanding of the universe, and I strive to blend these passions in my work.
-</p>
+        During my studies, I developed a neural network to identify exoplanets using data from the Kepler Space Telescope, which was both challenging and rewarding. I also completed my Bachelor's in Physics, where I delved into the electromagnetic detection of meteor signals—an experience that ignited my curiosity for the unknown.
+        I love sharing my research at international workshops and conferences, where I connect with fellow astronomy enthusiasts and learn from experts in the field. Outside of my academic work, I’m an active member of the Astronomy Society of Iran, where I engage with a vibrant community of astronomers and contribute to our shared passion for the stars.
+        When I’m not immersed in research, you can find me capturing the beauty of the night sky through photography or exploring new places. I believe that both science and art can illuminate our understanding of the universe, and I strive to blend these passions in my work.</p>
     </section>
 
     <section id="research" class="tab">
@@ -144,8 +162,8 @@ When I’m not immersed in research, you can find me capturing the beauty of the
     <section id="publications" class="tab">
         <h2>Publications</h2>
         <ul>
-            <li><a href="https://iopscience.iop.org/article/10.3847/2041-8213/ad864f">The Discovery of Polarized Water Vapor Megamaser Emission in a Molecular Accretion Disk.</a>in this pioneering study, we present the first linearly polarized H₂O maser emission detection in the extragalactic source NGC 1068. Our findings reveal that the electric polarization vectors are oriented perpendicularly to the filamentary structures in the molecular accretion disk, suggesting a complex interplay of magnetic fields.</li>
-            <li><a href="https://astro.ipm.ac.ir/conferences/31stspring/abstracts2/Aghelpasand.pdf">Electromagnetic Detection of ELF/VLF Signals Emitted by Geminids 2017 Meteors.</a>Skywatchers have long been intrigued by the radiant glow of meteors. Early reports indicate that sounds from these luminous meteors have been recorded, which is rare due to sound's slower speed compared to light. Astronomers suggest that ionized tails of meteors can generate electromagnetic waves in the ELF and VLF bands, causing nearby metal objects to vibrate and produce audible sounds, known as the Electrophonic effect. These waves travel at the speed of light, as confirmed by various measurements. A study detailed the detection of such signals during the 2017 Geminids meteor shower using a loop antenna and SuperSID monitor, effectively distinguishing these signals from local and natural noise. The research also discusses factors affecting data recording, highlighting an overlooked aspect of meteor observations and guiding future studies in this area.</li>
+            <li><a href="https://iopscience.iop.org/article/10.3847/2041-8213/ad864f">The Discovery of Polarized Water Vapor Megamaser Emission in a Molecular Accretion Disk.</a> In this pioneering study, we present the first linearly polarized H₂O maser emission detection in the extragalactic source NGC 1068. Our findings reveal that the electric polarization vectors are oriented perpendicularly to the filamentary structures in the molecular accretion disk, suggesting a complex interplay of magnetic fields.</li>
+            <li><a href="https://astro.ipm.ac.ir/conferences/31stspring/abstracts2/Aghelpasand.pdf">Electromagnetic Detection of ELF/VLF Signals Emitted by Geminids 2017 Meteors.</a> Skywatchers have long been intrigued by the radiant glow of meteors. Early reports indicate that sounds from these luminous meteors have been recorded, which is rare due to sound's slower speed compared to light. Astronomers suggest that ionized tails of meteors can generate electromagnetic waves in the ELF and VLF bands, causing nearby metal objects to vibrate and produce audible sounds, known as the Electrophonic effect. These waves travel at the speed of light, as confirmed by various measurements. A study detailed the detection of such signals during the 2017 Geminids meteor shower using a loop antenna and SuperSID monitor, effectively distinguishing these signals from local and natural noise. The research also discusses factors affecting data recording, highlighting an overlooked aspect of meteor observations and guiding future studies in this area.</li>
         </ul>
     </section>
 
