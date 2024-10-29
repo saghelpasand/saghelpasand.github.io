@@ -72,11 +72,16 @@
             display: block; /* Show active tab */
         }
 
+        .profile-container {
+            display: flex; /* Use flexbox to align items */
+            align-items: center; /* Center items vertically */
+        }
+
         .profile-image {
-            max-width: 100%;
+            max-width: 200px; /* Set a max width for the image */
             height: auto;
             border-radius: 5px; /* Rounded images */
-            margin: 10px 0; /* Space between images */
+            margin-right: 20px; /* Space between image and text */
         }
 
         h2 {
@@ -86,10 +91,11 @@
             border-radius: 5px; /* Rounded corners */
         }
 
-        p, li {
-            background-color: rgba(0, 0, 0, 0.7); /* Black highlight for paragraphs and list items */
+        p {
+            background-color: rgba(0, 0, 0, 0.7); /* Black highlight for paragraph */
             padding: 10px; /* Padding around text */
             border-radius: 5px; /* Rounded corners */
+            font-size: 1.2em; /* Increase font size */
         }
 
         a {
@@ -120,6 +126,15 @@
             .tab-buttons button {
                 width: 100%; /* Full width buttons */
             }
+
+            .profile-container {
+                flex-direction: column; /* Stack image and text on small screens */
+                align-items: center; /* Center items */
+            }
+
+            .profile-image {
+                max-width: 100%; /* Responsive image */
+            }
         }
     </style>
 </head>
@@ -140,11 +155,13 @@
 
     <section id="about" class="tab active">
         <h2>About Me</h2>
-        <img src="https://i.postimg.cc/nh7TYG0Y/20240911-155313.jpg" alt="Samaneh Aghelpasand" class="profile-image">
-        <p>Hello! I’m Samaneh Aghelpasand, an enthusiastic astronomer with a Master’s degree in Astronomy and Astrophysics from Alzahra University in Tehran. My journey into the cosmos began with a passion for understanding the universe, which led me to explore topics like the fascinating behaviors of water masers in star-forming regions.
-        During my studies, I developed a neural network to identify exoplanets using data from the Kepler Space Telescope, which was both challenging and rewarding. I also completed my Bachelor's in Physics, where I delved into the electromagnetic detection of meteor signals—an experience that ignited my curiosity for the unknown.
-        I love sharing my research at international workshops and conferences, where I connect with fellow astronomy enthusiasts and learn from experts in the field. Outside of my academic work, I’m an active member of the Astronomy Society of Iran, where I engage with a vibrant community of astronomers and contribute to our shared passion for the stars.
-        When I’m not immersed in research, you can find me capturing the beauty of the night sky through photography or exploring new places. I believe that both science and art can illuminate our understanding of the universe, and I strive to blend these passions in my work.</p>
+        <div class="profile-container">
+            <img src="https://i.postimg.cc/nh7TYG0Y/20240911-155313.jpg" alt="Samaneh Aghelpasand" class="profile-image">
+            <p>Hello! I’m Samaneh Aghelpasand, an enthusiastic astronomer with a Master’s degree in Astronomy and Astrophysics from Alzahra University in Tehran. My journey into the cosmos began with a passion for understanding the universe, which led me to explore topics like the fascinating behaviors of water masers in star-forming regions.
+            During my studies, I developed a neural network to identify exoplanets using data from the Kepler Space Telescope, which was both challenging and rewarding. I also completed my Bachelor's in Physics, where I delved into the electromagnetic detection of meteor signals—an experience that ignited my curiosity for the unknown.
+            I love sharing my research at international workshops and conferences, where I connect with fellow astronomy enthusiasts and learn from experts in the field. Outside of my academic work, I’m an active member of the Astronomy Society of Iran, where I engage with a vibrant community of astronomers and contribute to our shared passion for the stars.
+            When I’m not immersed in research, you can find me capturing the beauty of the night sky through photography or exploring new places. I believe that both science and art can illuminate our understanding of the universe, and I strive to blend these passions in my work.</p>
+        </div>
     </section>
 
     <section id="research" class="tab">
