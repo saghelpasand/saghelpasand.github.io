@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Title</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your stylesheet -->
+    <style>
+        /* Dark Mode Styles */
+        body {
+            background-image: url('https://example.com/your-background-image.jpg'); /* Replace with your image URL */
+            background-size: cover; /* Cover the entire background */
+            background-position: center; /* Center the image */
+            background-repeat: no-repeat; /* Do not repeat the image */
+            color: #e0e0e0; /* Light text color */
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: rgba(13, 13, 13, 0.8); /* Slightly transparent header */
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #ffcc00; /* Bright yellow for headings */
+            margin: 0;
+        }
+
+        nav {
+            margin: 20px 0;
+        }
+
+        .tab-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .tab-buttons button {
+            background-color: #2b2b2b; /* Button background */
+            color: #e0e0e0; /* Button text color */
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            border-radius: 5px; /* Rounded corners */
+        }
+
+        .tab-buttons button:hover {
+            background-color: #4d4d4d; /* Button hover effect */
+        }
+
+        .tab-buttons button.active {
+            background-color: #ffcc00; /* Highlight active tab */
+            color: #1a1a1a; /* Dark text for active button */
+        }
+
+        .tab {
+            display: none; /* Hide all tabs by default */
+            padding: 20px;
+            border-top: 1px solid #444;
+        }
+
+        .tab.active {
+            display: block; /* Show active tab */
+        }
+
+        .profile-image, .hobby-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px; /* Rounded images */
+            margin: 10px 0; /* Space between images */
+        }
+
+        h2 {
+            color: #ffcc00; /* Bright yellow for subsection headings */
+        }
+
+        a {
+            color: #66ccff; /* Light blue for links */
+            text-decoration: none; /* Remove underline */
+        }
+
+        a:hover {
+            text-decoration: underline; /* Underline on hover */
+        }
+
+        footer {
+            background-color: rgba(13, 13, 13, 0.8); /* Same as header */
+            color: #e0e0e0; /* Light text color */
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Media Queries for responsiveness */
+        @media (max-width: 600px) {
+            .tab-buttons {
+                flex-direction: column; /* Stack buttons on small screens */
+            }
+
+            .tab-buttons button {
+                width: 100%; /* Full width buttons */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Astronomy Page</h1>
+        <nav>
+            <div class="tab-buttons">
+                <button class="active" data-tab="about" onclick="showTab(this)">About Me</button>
+                <button data-tab="research" onclick="showTab(this)">Research</button>
+                <button data-tab="publications" onclick="showTab(this)">Publications</button>
+                <button data-tab="contact" onclick="showTab(this)">Contact</button>
+                <button data-tab="hobbies" onclick="showTab(this)">Interests & Hobbies</button>
+                <button data-tab="cv" onclick="showTab(this)">CV</button>
+            </div>
+        </nav>
+    </header>
+
+    <section id="about" class="tab active">
+        <h2>About Me</h2>
+        <img src="https://i.postimg.cc/nh7TYG0Y/20240911-155313.jpg" alt="Samaneh Aghelpasand" class="profile-image">
+        <p>Hello! I’m Samaneh Aghelpasand, an enthusiastic astronomer...</p>
+    </section>
+
+    <section id="research" class="tab">
+        <h2>Research</h2>
+        <p>My current research projects encompass a diverse range of topics...</p>
+    </section>
+
+    <section id="publications" class="tab">
+        <h2>Publications</h2>
+        <ul>
+            <li><a href="https://iopscience.iop.org/article/10.3847/2041-8213/ad864f">The Discovery of Polarized Water Vapor Megamaser Emission in a Molecular Accretion Disk.</a>...</li>
+            <li><a href="https://astro.ipm.ac.ir/conferences/31stspring/abstracts2/Aghelpasand.pdf">Electromagnetic Detection of ELF/VLF Signals Emitted by Geminids 2017 Meteors.</a>...</li>
+        </ul>
+    </section>
+
+    <section id="contact" class="tab">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:Samane.aghelpasand@gmail.com">Samane.aghelpasand@gmail.com</a></p>
+    </section>
+
+    <section id="hobbies" class="tab">
+        <h2>Interests & Hobbies</h2>
+        <p>I love photography and enjoy taking unplanned trips...</p>
+        <img src="https://i.postimg.cc/25F9Q72L/IMG-20241028-174101-490.jpg" alt="Hobby 1" class="hobby-image">
+        <img src="https://i.postimg.cc/9FMb4j69/saghelpasand-resin-artt.png" alt="Hobby 2" class="hobby-image">
+        <img src="https://i.postimg.cc/W3zzGXT5/saghelpasand-resin-art.png" alt="Hobby 3" class="hobby-image">
+        <img src="https://i.postimg.cc/RhcBKH6P/Screenshot-from-2024-09-11-21-59-40.png" alt="Hobby 4" class="hobby-image">
+    </section>
+
+    <section id="cv" class="tab">
+        <h2>Curriculum Vitae</h2>
+        <p>You can download my CV <a href="https://files.fm/u/8fves65wya#/view/z34k4eqaet" target="_blank">here</a>.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Samaneh Aghelpasand. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function showTab(button) {
+            const tabName = button.getAttribute('data-tab');
+            const tabs = document.querySelectorAll('.tab');
+            const buttons = document.querySelectorAll('.tab-buttons button');
+
+            // Hide all tabs
+            tabs.forEach(tab => {
+                tab.classList.remove('active');
+            });
+
+            // Remove active class from all buttons
+            buttons.forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            // Show the selected tab
+            document.getElementById(tabName).classList.add('active');
+            button.classList.add('active');
+        }
+    </script>
+</body>
+</html>
